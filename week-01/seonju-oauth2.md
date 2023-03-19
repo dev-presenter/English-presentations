@@ -20,6 +20,7 @@ These define the essential components of an OAuth 2.0 system, and are as follows
 ### OAuth 2.0 Protocol Flow
 
 ![https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2](./images/abstract_protocol_flow.png)
+
 *[https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)*
 
 1. The *application* requests authorization to access service resources from the *user*
