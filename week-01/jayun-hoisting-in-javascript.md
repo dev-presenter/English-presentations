@@ -1,10 +1,10 @@
 # Hoisting in JavaScript
 
-> In JavaScript, hoisting allows you to use functions and variables **before they’re declared**.
+> In JavaScript, hoisting allows you to use functions and variables **before they’re declared**. Just like a ninja silently and swiftly moves through the shadows, **JavaScript hoists declarations to the top of their scope** without making a sound. 🥷🏻 Let's find out the real meaning hidden in this sentence.
 
-## What is hoisting?
+## 1. What is hoisting?
 
-Take a look at the code below and guess what happens when it runs:
+- Take a look at the code below and guess what happens when it runs:
 
 ```tsx
 console.log(foo);
@@ -20,7 +20,7 @@ var foo = 'foo';
 - It “hoists” your declarations **to the top of their containing scope** before execution.
   - This process is called hoisting, and it allows us to use `foo` before its declaration in our example above.
 
-## Variable hoisting in JavaScript
+## 2. Variable hoisting in JavaScript
 
 - We declare a variable with the `var`, `let`, and `const` statements.
 - We assign a variable a value using the assignment operator.
@@ -45,7 +45,7 @@ const baz = 'baz';
 
 - Variable hoisting acts differently depending on how the variable is declared.
 
-## Variable hoisting with `var`
+### 2-1. Variable hoisting with `var`
 
 - When the interpreter hoists a variable declared with `var`, it initializes its value to `undefined`.
 
@@ -57,7 +57,7 @@ var foo = 'bar';
 console.log(foo); // "bar"
 ```
 
-- As we defined earlier, hoisting comes from the interpreter splitting variable declaration and assignment.
+- As we defined earlier, hoisting comes from **the interpreter splitting variable declaration and assignment**.
 - We can achieve this same behavior manually by splitting the declaration and assignment into two steps.
 
 ```tsx
@@ -70,7 +70,7 @@ foo = 'foo';
 console.log(foo); // "foo"
 ```
 
-- The first console.log(foo) outputs undefined because foo is hoisted and given a default value.
+- The first `console.log(foo)` outputs `undefined` because `foo` is hoisted and given a default value.
 - Using an undeclared variable will throw a `ReferenceError` instead.
 
 ```tsx
@@ -85,12 +85,12 @@ foo = 'foo'; // Assigning a variable that's not declared is valid
 ```
 
 - By now, you may be thinking,
-  - “It’s kind of weird that JavaScript lets us access variables before they’re declared.”
-- This behavior is an unusual part of JavaScript and can lead to errors.
-- Using a variable before its declaration is usually not desirable.
-- Thankfully the `let` and `const` variables, introduced in ECMAScript 2015, behave differently.
+  - “It’s kind of weird that **JavaScript lets us access variables before they’re declared.**”
+- This behavior is an unusual part of JavaScript and can lead to errors.🚨
+- **Using a variable before its declaration is usually not desirable.**
+- Thankfully the `let` and `const` variables, introduced in ECMAScript 2015, behave differently.✨
 
-## Variable hoisting with `let` and `const`
+### 2-2. Variable hoisting with `let` and `const`
 
 - Variables declared with `let` and `const` are hoisted **but not initialized with a default value**.
 - Accessing a `let` or `const` variable before it's declared will result in a `ReferenceError` .
@@ -101,12 +101,11 @@ console.log(foo); // Uncaught ReferenceError: Cannot access 'foo' before initial
 let foo = 'bar'; // Same behavior for variables declared with const
 ```
 
-Notice that the interpreter still hoists `foo`: the error message tells us the variable is initialized somewhere.
+- Notice that the interpreter **still hoists `foo`**: **the error message tells us the variable is initialized somewhere**.
 
-## The temporal dead zone
+## 3. The temporal dead zone
 
-> A **temporal dead zone (TDZ)**
->  is the area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.
+> A **temporal dead zone (TDZ)** is the area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.
 
 - The reason that we get a reference error when we try to access a `let` or `const` variable before its declaration is because of the temporal dead zone(TDZ).
 - **The TDZ starts at the beginning of the variable's enclosing scope and ends when it is declared.**
@@ -164,6 +163,10 @@ foobar(); // "foo"
 ```
 
 > So, to prevent JavaScript from throwing such an error, you’ve got to remember to access your variables from outside the temporal dead zone.
+
+## Summary
+
+- JavaScript's hoisting behavior can be a double-edged sword: it can save you from errors caused by undefined variables, but it can also create confusing and hard-to-debug situations.
 
 ---
 
