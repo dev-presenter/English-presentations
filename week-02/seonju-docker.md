@@ -54,7 +54,7 @@ By default, a container is relatively well isolated from other containers and it
 
 ## Examples
 
-Let’s create images and run containers.
+Let’s create images and run containers. This is an example that simply prints 'Hello, World'.
 
 1. Write a *Dockerfile*
 
@@ -62,8 +62,9 @@ Let’s create images and run containers.
 FROM alpine:latest
 CMD ["echo", "Hello, World"]
 ```
+- Write a list consisting of images in a *Dockerfile*.
 
-1. Build to Dockerfile and generate image
+2. Create an image
 
 ```bash
 $ docker build -t hello-world .
@@ -71,15 +72,22 @@ $ docker build -t hello-world .
 
 ![docker-example-1](./images/docker-example-1.png)
 
+- Build the Dockerfile and create an image.
+
 ![docker-example-2](./images/docker-example-2.png)
 
-1. Run docker image
+- Generating images can be shown by the `docker images` command.
+
+3. Run a container
 
 ```bash
 docker run hello-world
 ```
 
+- Run a container based on a image.
+
 ![docker-example-3](./images/docker-example-3.png)
+
 
 ## References
 
