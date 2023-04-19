@@ -10,7 +10,7 @@ Before we look into Docker, let's suppose when we publish a web application.
     - the operating system, the web server, the database server and the programming language
 - run the app
 
-In additional, if your app got popular, you practiced good load balancing by setting up a second server to ensure the application wouldn't crash from too much traffic.
+In addition, if your app got popular, you practiced good load balancing by setting up a second server to ensure the application wouldn't crash from too much traffic.
 
 Times have changed, though, and instead of focusing on single servers, the Internet is built upon arrays of inter-dependent and redundant servers in "the cloud". These software-based servers are called **containers**.
 
