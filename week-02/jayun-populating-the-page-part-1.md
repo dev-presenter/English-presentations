@@ -1,5 +1,32 @@
 # Populating the page: how browsers work (Part 1)
 
+## Table of Contents
+
+- [1. Introduction](#1-introduction)
+  - [1-1. To provide better user experiences](#1-1-to-provide-better-user-experiences)
+- [2. Overview](#2-overview)
+  - [2-1. Latency](#2-1-latency)
+    - [Network latency](#network-latency)
+    - [Developers' goals](#developers--goals)
+  - [2-2. Browsers are single-threaded](#2-2-browsers-are-single-threaded)
+    - [single-threaded](#single-threaded)
+    - [Developers' goals](#developers--goals-1)
+    - [Render time is key](#render-time-is-key)
+    - [Web performance can be improved by doing these](#web-performance-can-be-improved-by-doing-these)
+- [3. Navigation](#3-navigation)
+  - [3-1. Navigation Step 1. DNS Lookup](#3-1-navigation-step-1-dns-lookup)
+    - [Process of DNS Lookup](#process-of-dns-lookup)
+    - [Once per hostname](#once-per-hostname)
+  - [3-2. Navigation Step 2. TCP Handshake](#3-2-navigation-step-2-tcp-handshake)
+    - [TCP: Transmission Control Protocol](#tcp--transmission-control-protocol)
+    - [Three-way handshaking](#three-way-handshaking)
+  - [3-3. Navigation Step 3. TLS Negotiation](#3-3-navigation-step-3-tls-negotiation)
+- [4. Response](#4-response)
+  - [4-1. TTFB (Time to First Byte)](#4-1-ttfb--time-to-first-byte-)
+  - [4-2. TCP Slow Start / 14KB rule](#4-2-tcp-slow-start---14kb-rule)
+  - [4-3. Congestion control](#4-3-congestion-control)
+- [5. Upcoming presentation - Part 2](#5-upcoming-presentation---part-2)
+
 ## 1. Introduction
 
 > As web developers, we need to know how browsers work. But why specifically do we need to know, and how can it help us?
