@@ -109,3 +109,8 @@ Let's talk about the benefits of JSON Web Tokens (JWT) when compared to Simpl
     - JSON parsers map directly to objects, but XML doesn't have a natural document-to-object mapping.
 
 ![Comparison JWT and SAML](https://user-images.githubusercontent.com/52817735/235346684-079e7425-5e34-460f-b6f3-daca864caeb0.png)
+
+
+## Reference
+
+- https://jwt.io/introduction
