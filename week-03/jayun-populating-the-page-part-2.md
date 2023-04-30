@@ -1,4 +1,4 @@
-# Populating the page: how browsers work (Part 1)
+# Populating the page: how browsers work (Part 2)
 
 ## Table of Contents
 
@@ -99,7 +99,7 @@
 
 - The CSSOM and DOM trees created in the parsing step are combined into a **render tree**.
   - Used to compute the layout of every visible element → painted to the screen
-- **In some cases, content can be promoted to its own layers and composited, improving performance by painting portions of the screen on the GPU instead of the CPU, freeing up the main thread.**
+- In some cases, content can be promoted to its own layers and composited, improving performance by painting portions of the screen on the GPU instead of the CPU, freeing up the main thread.
 
 #### Tags that aren’t going to be displayed
 
