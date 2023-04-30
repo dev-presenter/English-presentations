@@ -75,6 +75,7 @@ HMACSHA256(
 ```
 
 ### Output
+![jwt output](https://user-images.githubusercontent.com/52817735/235346663-8e329269-9029-4531-938b-9d3c67821093.png)
 
 - This is consist of three Base64-URL strings separated by dots
 
@@ -89,7 +90,7 @@ HMACSHA256(
     - You should not keep tokens longer than required because tokens are credentials.
     - Whenever the user wants to access a protected route or resource, the user agent should send the JWT typically in the **Authorization** header using the **Bearer** schema.
 
-        ```json
+        ```
         Authorization: Bearer <token>
         ```
 
@@ -106,3 +107,5 @@ Let's talk about the benefits of JSON Web Tokens (JWT) when compared to Simpl
     - JWT and SAML tokens can use a public/private key pair in the form.
 - Easy:
     - JSON parsers map directly to objects, but XML doesn't have a natural document-to-object mapping.
+
+![Comparison JWT and SAML](https://user-images.githubusercontent.com/52817735/235346684-079e7425-5e34-460f-b6f3-daca864caeb0.png)
