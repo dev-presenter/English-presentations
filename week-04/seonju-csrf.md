@@ -17,7 +17,7 @@
     - Purchasing a product
     - Changing a password
     - Sending a message
-    - 
+    
 ### How does CSRF work?
 ![image](https://github.com/dev-presenter/English-presentations/assets/52817735/7eafb3d2-80ce-42f7-9536-a163c4dea0a9)
 
